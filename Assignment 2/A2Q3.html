@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2 Q2 </title>
+</head>
+
+<body style="height: 5550px;" onmousemove="coord()">
+    <p><strong>3. Create an application to print mouse coordinates.</strong></p>
+
+    <span>X-Coordinate:</span>
+    <span id="xco"> </span> <br>
+    <span>Y-Coordinate:</span>
+    <span id="yco"> </span>
+
+    <script>
+        function coord() {
+            var x = event.clientX;
+            var y = event.clientY;
+            document.getElementById("xco").innerHTML = x;
+            document.getElementById("yco").innerHTML = y;
+        }
+    </script>
+
+</body>
+
+</html>

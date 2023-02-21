@@ -1,0 +1,78 @@
+QUESTION 5:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate 5</title>
+    <style>
+        .slider {
+            position: relative;
+        }
+
+        .slider img {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            display: none;
+
+        }
+
+        .slider img:first-child {
+            display: block;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var currentSlide = 1;
+            var totalSlides = $('.slider img').length;
+
+            $('.next').click(function () {
+                if (currentSlide == totalSlides) {
+                    currentSlide = 1;
+                }
+                else {
+                    currentSlide++;
+                }
+
+                $('.slider img').hide();
+                $('.slider img:nth-child(' + currentSlide + ')').show();
+            });
+
+            $('.prev').click(function () {
+                if (currentSlide == 1) {
+                    currentSlide = totalSlides;
+                }
+                else {
+                    currentSlide--;
+                }
+
+                $('.slider img').hide();
+                $('.slider img:nth-child(' + currentSlide + ')').show();
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="slider">
+        <img src="dog.jpg" alt="Image 1">
+        <img src="download.jpeg" alt="Image 2">
+        <img src="fox.jpeg" alt="Image 3">
+    </div>
+
+    <div class="slider-nav">
+        <button class="prev">Previous</button>
+        <button class="next">Next</button>
+    </div>
+
+</body>
+
+</html>

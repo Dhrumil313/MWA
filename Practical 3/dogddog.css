@@ -1,0 +1,59 @@
+.leftsec {
+    position: relative;
+    float: left;
+}
+
+.d {
+    font-size: 40px;
+}
+
+img {
+    position: absolute;
+    left: 50vw;
+
+}
+
+.heads {
+    background-color: #b6d2ec;
+    color: #2a75ba;
+    font-size: 27px;
+    padding: 5px;
+}
+
+.blucol {
+    color: #2a75ba;
+    text-decoration: none !important;
+    font-weight: bold;
+
+}
+
+.about a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    font-size: 18px;
+}
+
+table,
+th,
+tr,
+td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+
+}
+
+.grbk {
+    background-color: #eaeaea;
+}
+
+.f1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.f2 {
+    font-family: "comic sans MS";
+}

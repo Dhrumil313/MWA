@@ -1,0 +1,294 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Language" content="en-us">
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>Registration Form</title>
+	<script src="./prac5.js"></script>
+</head>
+<style>
+	td {
+		border: 2px;
+	}
+
+	#uerror:invalid {
+		color: red;
+	}
+
+	#uerror:valid {
+		color: rgb(26, 255, 0);
+	}
+</style>
+
+<body bgcolor="#FFFFFF">
+
+	<h1 align="center">
+		<font face="Algerian" size="7">Registration Form</font>
+	</h1>
+
+	<form>
+		<div align="center">
+			<table border="5px" width="38%" cellpadding="20" bordercolor="black">
+				<!-- ******USERNAME******* -->
+				<tr>
+					<td style="padding-bottom: 0px;" width="295">
+						<p align="right"><b>
+
+								<font size="4">UserName :</font>
+							</b>
+					</td>
+					<td style="padding-bottom: 0px;">
+						<p align="center">
+							<font size="6">
+								<input onkeyup="validuser()" autofocus type="text" id="U" size="20"
+									style="font-weight: 700; float: left">
+							</font>
+					</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr cellpadding="0">
+					<td cellpadding="0" width="295">
+						<p align="right"><b>
+							</b>
+					</td>
+					<td style="padding:0px ">
+						<p align=" center">
+
+							<span id="uerror"></span>
+							<br>
+							<span>(Username should have min 5 characters and No special characters)</span>
+					</td>
+					<td>&nbsp;</td>
+				</tr>
+				<!--********* PASSWORD ***************  -->
+				<tr>
+					<td style="padding-bottom: 0px;" width="295">
+						<p align="right"><b>
+								<font size="4">Password :</font>
+							</b>
+					</td>
+					<td style="padding-bottom: 0px;">
+						<font size="6"><input onkeyup="validpass()" type="text" id="pass" size="23"></font>
+					</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr cellpadding="0">
+					<td cellpadding="0" width="295">
+						<p align="right"><b>
+							</b>
+					</td>
+					<td style="padding:0px">
+						<p align=" center">
+							<span style="font-weight: bold;">Password must contain:</span><br>
+							<span id="perr0">Minimum 8 characters</span><br>
+							<span id="perr1">Uppercase and lowercase character</span><br>
+							<span id="perr2">Atleast 1 Number</span><br>
+							<span id="perr3">Special character</span>
+							<br>
+							<span></span>
+					</td>
+					<td>&nbsp;</td>
+				</tr>
+				<!--********* CONFIRM PASSWORD ***************  -->
+				<tr>
+					<td style="padding-bottom: 0px;" width="295">
+						<p align="right"><b>
+								<font size="4">Confirm Password :</font>
+							</b>
+					</td>
+					<td style="padding-bottom: 0px;">
+						<font size="6"><input onkeyup="conpass()" type="text" id="cpid" size="23"></font>
+					</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr style="padding: 0px;">
+					<td></td>
+					<td height="10px" style="padding:0px">
+						<p align=" center">
+							<span id="cpop"></span>
+					</td>
+					<td style="padding: 0px;">&nbsp;</td>
+				</tr>
+				<!--********* EMAIL ***************  -->
+				<tr>
+					<td style="padding-bottom: 0px;" width="295">
+						<p align="right"><b>
+								<font size="4">Enter Email Id: </font>
+							</b>
+					</td>
+					<td style="padding-bottom: 0px;">
+						<font size="6"><input onkeyup="emailid()" type="text" id="emid" size="23"></font>
+					</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr style="padding: 0px;">
+					<td></td>
+					<td height="10px" style="padding:0px">
+						<p align=" center">
+							<span id="emidop"></span>
+					</td>
+					<td style="padding: 0px;">&nbsp;</td>
+				</tr>
+				<!--********* PAN CARD ***************  -->
+				<tr>
+					<td style="padding-bottom: 0px;" width="295">
+						<p align="right"><b>
+								<font size="4">Enter PAN Number:</font>
+							</b>
+					</td>
+					<td style="padding-bottom: 0px;">
+						<font size="6"><input onkeyup="panno()" type="text" id="panid" size="23"></font>
+					</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr style="padding: 0px;">
+					<td></td>
+					<td height="10px" style="padding:0px">
+						<p align=" center">
+							<span id="panop"></span>
+					</td>
+					<td style="padding: 0px;">&nbsp;</td>
+				</tr>
+				<!--********* AADHAR CARD ***************  -->
+				<tr>
+					<td style="padding-bottom: 0px;" width="295">
+						<p align="right"><b>
+								<font size="4">Enter Aadhar Number:</font>
+							</b>
+					</td>
+					<td style="padding-bottom: 0px;">
+						<font size="6"><input onkeyup="adhno()" type="text" id="adhid" size="23"></font>
+					</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr style="padding: 0px;">
+					<td></td>
+					<td height="10px" style="padding:0px">
+						<p align=" center">
+							<span id="adhop"></span>
+					</td>
+					<td style="padding: 0px;">&nbsp;</td>
+				</tr>
+				<!--********* Mobile no ***************  -->
+				<tr>
+					<td style="padding-bottom: 0px;" width="295">
+						<p align="right"><b>
+								<font size="4">Enter Phone Number:</font>
+							</b>
+					</td>
+					<td style="padding-bottom: 0px;">
+						<font size="6"><input onkeyup="phnof()" type="text" id="phid" size="23"></font>
+					</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr style="padding: 0px;">
+					<td></td>
+					<td height="10px" style="padding:0px">
+						<p align=" center">
+							<span id="phno"></span>
+					</td>
+					<td style="padding: 0px;">&nbsp;</td>
+				</tr>
+
+				<tr>
+					<td width="295">
+						<p align="right"><b>
+								<font size="4">Choose Hobbies: </font>
+							</b>
+					</td>
+					<td>
+						<input type="checkbox" id="cb1" value="ON" style="font-weight: 700"><b>Reading</b>
+						<p>
+							<input type="checkbox" id="cb2" value="ON" style="font-weight: 700"><b>Listening
+								to Music</b>
+						</p>
+						<p>
+							<input type="checkbox" id="cb3" value="ON" style="font-weight: 700"><b>Playing
+								Games</b>
+						</p>
+						<span id="cbxop"></span>
+					</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="295" bordercolorlight="#FF00FF" bordercolordark="#800000">
+						<p align="right"><b>
+								<font size="4">Choose Your Stream:</font>
+							</b>
+					</td>
+					<td>
+						<input type="radio" id="rb1" value="V1" style="font-weight: 700"><b>Science</b>
+						<p>
+							<input type="radio" id="rb2" value="V2" style="font-weight: 700"><b>Commerce</b>
+						</p>
+						<p>
+							<input type="radio" id="rb3" value="V3" style="font-weight: 700"><b>Arts</b>
+						</p>
+						<span id="rbop"></span>
+					</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="295">
+						<p align="right"><b>
+								<font size="4">Choose Transportation</font>
+							</b>
+					</td>
+					<td><select size="1" name="D1">
+							<option>Choose one option</option>
+							<option id="dd1">Car</option>
+							<option id="dd2">Bus</option>
+							<option id="dd3">Cycle</option>
+							<option id="dd4">Bike</option>
+						</select><br>
+						<span id="ddop"></span>
+					</td>
+					<td>&nbsp;</td>
+				</tr>
+
+				<tr>
+					<td width="295">&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+			</table>
+		</div>
+		<p>&nbsp;</p>
+		<p align="center">
+			<!-- <button onclick="validate()" name="B1">SUBMIT</button> -->
+			<input type="button" onclick="validate()" id="" value="SUBMIT">
+
+		</p>
+	</form>
+
+</body>
+
+</html>
+
+
+<!-- 
+<tr>
+	<td width="295">
+		<p align="right"><b>
+				<font size="4">Enter Address:</font>
+			</b>
+	</td>
+	<td><textarea rows="2" name="S1" cols="20"></textarea></td>
+	<td>&nbsp;</td>
+</tr>
+<tr>
+	<td width="295">
+		<p align="right"><b>
+				<font size="4">Upload ID Proof:</font>
+			</b>
+	</td>
+	<td><input type="file" name="F1" size="20"></td>
+	<td>&nbsp;</td>
+</tr>
+<tr>
+	<td width="295">
+		&#128514;&#128514;&#128514;&#127783;&#127783;&#127783;&#127926;&#127926;&#127926;&#9889;&#10004;&#128049;&#8205;&#128009;&#128049;&#8205;&#128640;&#128049;&#8205;&#128083;&#10024;&#128049;&#8205;&#127949;&#9748;
+	</td>
+	<td><input type="button" value="click this button" name="B3"></td>
+	<td>&nbsp;</td>
+</tr> -->

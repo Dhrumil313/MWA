@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function retrieve() {
+            var x = document.getElementById("word").value;
+            console.log(x)
+
+            if (!["a", "e", "i", "o", "u", "b", "f", "m"].includes(x[0].toLowerCase())) {
+                document.getElementById("para").innerHTML = "Result is ";
+                document.getElementById("para").innerHTML += `<br>${x}, ${x}, bo-b${x.slice(1, x.length)}<br>Banana-fana fo-f${x.slice(1, x.length)}<br>Fee-fi-mo-m${x.slice(1, x.length)}<br>${x}!`;
+            }
+            else if (["a", "e", "i", "o", "u"].includes(x[0].toLowerCase())) {
+                console.log("vow")
+                document.getElementById("para").innerHTML = "Result is ";
+                document.getElementById("para").innerHTML += `<br>${x}, ${x}, bo-b${x.toLowerCase()}<br>Banana-fana fo-f${x.toLowerCase()}<br>Fee-fi-mo-m${x.toLowerCase()}<br>${x}!`;
+            }
+            else if (["b"].includes(x[0].toLowerCase())) {
+                document.getElementById("para").innerHTML = "Result is ";
+                document.getElementById("para").innerHTML += `<br>${x}, ${x}, bo-${x.slice(1, x.length)}<br>Banana-fana fo-f${x.slice(1, x.length)}<br>Fee-fi-mo-m${x.slice(1, x.length)}<br>${x}!`;
+                console.log("bfm")
+            }
+            else if (["f"].includes(x[0].toLowerCase())) {
+                document.getElementById("para").innerHTML = "Result is ";
+                document.getElementById("para").innerHTML += `<br>${x}, ${x}, bo-b${x.slice(1, x.length)}<br>Banana-fana fo-${x.slice(1, x.length)}<br>Fee-fi-mo-m${x.slice(1, x.length)}<br>${x}!`;
+                console.log("bfm")
+            }
+            else if (["m"].includes(x[0].toLowerCase())) {
+                document.getElementById("para").innerHTML = "Result is ";
+                document.getElementById("para").innerHTML += `<br>${x}, ${x}, bo-b${x.slice(1, x.length)}<br>Banana-fana fo-f${x.slice(1, x.length)}<br>Fee-fi-mo-${x.slice(1, x.length)}<br>${x}!`;
+                console.log("bfm")
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    Enter No <input type="text" id="word">
+    <input type="submit" onclick="retrieve()">
+    <p id="para">Result is </p>
+</body>
+
+</html>

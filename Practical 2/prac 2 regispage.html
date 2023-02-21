@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="formpractice.css">
+    <style>
+        datalist {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            writing-mode: vertical-lr;
+            width: 120px;
+            margin-left: 710px;
+        }
+    </style>
+</head>
+
+<body>
+    <p align="center" id="a"><a href="./prac 2 homepage.html" target="_blank">MY CV</a><a> &nbsp &nbsp &nbsp </a> <a
+            href="./prac 2 regispage.html" target="_parent">Registration
+            page</a> <a> &nbsp &nbsp &nbsp </a> <a href="./prac 2 contact.html">Contact us</a>
+    </p>
+    <br>
+    <br>
+
+    <h1 align="center">Registration Form</h1>
+    <hr size="2" color="black">
+
+    <form align="center">
+
+        First Name : <input type="text" placeholder="First name" size="20" required autofocus><br><br>
+        Last Name : <input type="text" placeholder="Last name"><br><br>
+
+        Email : <input type="email" placeholder="First name"><br><br>
+        Password : <input type="password" minlength="8" placeholder="Password"><br><br>
+        Confirm passwrod: <input type="password" placeholder="Re-enter Password"><br><br>
+        Phone Number : <input type="number" placeholder="Number"><br><br>
+
+        <p>Range of package expected:</p>
+        <input type="range" width="850px" list="tickmarks">
+        <div>
+            <datalist id="tickmarks">
+                <option value="25">5LPA</option>
+                <option value="50">10LPA</option>
+                <option value="75">20LPA</option>
+                <option value="100">25+LPA</option>
+            </datalist>
+        </div>
+        <table border="0" align="center" cellpadding="5px">
+            <tr align="center">
+                <td>Gender:</td>
+                <td><input type="radio" name="User_gender" value="m" required>Male<br>
+                </td>
+            </tr>
+            <tr align="center">
+                <td></td>
+                <td><input type="radio" name="User_gender" value="f">Female</td>
+                </td>
+            </tr>
+        </table>
+
+        Mode of work :
+        <input type="checkbox" name="User_mode" value="Online">Online
+        <input type="checkbox" name="User_mode" value="Inperson">Inperson
+        <input type="checkbox" name="User_mode" value="Hybrid">Hybrid
+        <br><br>
+        Upload File :
+        <input type="file" name="User_file"><br><br>
+
+        Address :
+        <br>
+        <textarea cols="30" rows="5" placeholder="First name"></textarea><br><br>
+
+
+        Transportation :
+        <select name="User_Trans">
+            <optgroup label="Two-Wheeler">
+                <option value="Bike">Bike</option>
+                <option value="motorBike">MotorBike</option>
+            </optgroup>
+            <optgroup label="Four-Wheeler">
+                <option value="Van">Van</option>
+                <option value="Car">Car</option>
+                <option value="Bus">Bus</option>
+            </optgroup>
+        </select><br><br>
+        <center>
+            <button type="submit">Submit Now</button>
+            <button type="reset">Reset Now</button>
+        </center>
+
+    </form>
+
+</body>
+
+</html>

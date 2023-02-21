@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignment 1 Q2</title>
+    <style>
+        #star {
+            border: 1px solid black;
+            width: 15%;
+            height: 150px;
+            font-size: 29px;
+            font-weight: bold;
+            margin-top: 150px;
+            margin-left: 50px;
+            background-color: blanchedalmond;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+
+        #h {
+            margin-left: 450px;
+
+
+        }
+    </style>
+
+    <script>
+        let startTime;
+        function start() {
+
+            document.getElementById("star").style.marginLeft = "350px";
+            document.getElementById("star").style.marginTop = "200px";
+            document.getElementById("star").style.backgroundColor = "red";
+            document.getElementById("para").innerHTML = "....";
+
+
+            let delay = (Math.random() * 8) * 1000
+            console.log(delay)
+            setTimeout(
+                function () {
+                    document.getElementById("star").style.backgroundColor = "green";
+                    document.getElementById("star").style.marginLeft = "450px";
+                    document.getElementById("star").style.marginTop = "200px";
+                    document.getElementById("para").innerHTML = "Press Now";
+
+                    document.getElementById("star").onclick = press;
+                }, delay);
+        }
+
+        function press() {
+            document.getElementById("h").innerHTML += "\nPRESSED"
+            console.log("PRESSED")
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="start()" id="star">
+        <p id="para">Start</p>
+    </button>
+
+    <h1 id="h"></h1>
+</body>
+
+</html>

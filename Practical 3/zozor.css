@@ -1,0 +1,211 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: beige;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+
+/* .main_wrp {
+    position: absolute;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    /* display: block; */
+/* position: relative;
+}
+*/
+
+.zlogo {
+
+    display: flex;
+    flex-direction: row;
+    font-size: 40px;
+
+}
+
+h3 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding-left: 6px;
+}
+
+span {
+    font-size: 20px;
+}
+
+.navbar {
+    display: flex;
+    font-size: 25px;
+    position: absolute;
+    top: 15vh;
+    right: 10vw;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+    background-color: rgb(14, 13, 13);
+}
+
+a {
+    padding: 8px;
+    text-decoration: none;
+}
+
+.line {
+    background-image: url(./line.png);
+    height: 4px;
+    background-repeat: repeat-x;
+    width: 90%;
+    position: absolute;
+    top: 20vh;
+
+}
+
+
+.banner {
+
+    height: 200px;
+    width: 80%;
+    border: 0px solid;
+    background-image: url(./sanfrancisco.jpg);
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px #1c1a19;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 26vh;
+    margin-left: 100px;
+}
+
+.btxt {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 99%;
+    height: 33px;
+    padding-top: 15px;
+    padding-left: 10px;
+    /* height: 35px; */
+    border-radius: 0 0 20px 20px;
+    color: aliceblue;
+    background-color: rgba(42, 40, 40, 0.8);
+    /* padding-left: 4px; */
+}
+
+.rb {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    height: 25px;
+    background-color: rgb(168, 5, 5);
+    color: aliceblue;
+    background-image: url(./small_arrow.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-right: 10px;
+    border-radius: 5px;
+    /* padding-right: 10px; */
+}
+
+.a1 {
+    position: absolute;
+    top: 60vh;
+    /* display: inline-block; */
+    left: 10vw;
+    position: absolute;
+    top: 60vh;
+}
+
+.a1 div {
+    padding: 5px;
+}
+
+
+.a1s1 {
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.trv {
+    margin-top: 30px;
+}
+
+
+.aside {
+    background-color: #706B64;
+    position: absolute;
+    top: 63vh;
+    right: 30vh;
+    width: 20vw;
+    /* height: 60vh; */
+    padding: 10px;
+    text-align: justify;
+    color: aliceblue;
+    border-radius: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-shadow: 0px 8px 10px black;
+
+}
+
+.aside p {
+    text-align: center;
+}
+
+.zzr {
+    border: 2px solid black;
+
+}
+
+.aar {
+    position: relative;
+    right: 1.5vw;
+}
+
+.smlog img {
+    border: 2px solid black;
+    border-radius: 0 8px 0 8px;
+}
+
+footer {
+    background: url(top.png) no-repeat top center, url(./line.png) repeat-x;
+    padding-top: 0px;
+    position: absolute;
+    top: 135vh;
+    width: 80%;
+
+}
+
+.tw,
+.pic,
+.frnds {
+    display: inline-block;
+    vertical-align: top;
+    margin: 55px;
+    margin-top: 0px;
+}
+
+.tw h1,
+.pic h1,
+.frnds h1 {
+    font-size: 25px;
+    font-style: normal;
+}
+
+.frnds ul {
+    margin-top: 0px;
+    list-style-image: url(./external_link.png);
+    display: inline-block;
+    vertical-align: top;
+    color: #760001;
+}

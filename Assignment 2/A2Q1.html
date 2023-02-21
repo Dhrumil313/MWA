@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2 Q1 </title>
+</head>
+
+<body>
+    <strong>
+        <p>Q1 Create percentage calculator for semester IV. User will enter no of courses and clcik submit button. Thos
+            many
+            number fields must be generated dynamically. User will enter marks of each course and the calculate
+            percentage.
+            (Hint:Use DOM methods createElement(),setAttributes(), createTextNode(), appendChild())</p>
+    </strong>
+
+    Enter Number of courses: <input type="number" id="noc">
+    <button id="s1" onclick="create()">Submit</button>
+    <p id="inps"></p>
+    <p id="op"></p>
+    <script>
+        function create() {
+            let x = parseInt(document.getElementById("noc").value)
+            let i = 0;
+            console.log(x)
+            let p = document.getElementById("inps")
+            p.innerHTML = ""
+            for (i = 1; i <= x; i++) {
+                var m = document.createTextNode("Marks for Course " + i + ": ")
+                var y = document.createElement("input")
+                y.setAttribute("type", "text")
+                y.setAttribute("id", i)
+                p.appendChild(m)
+                p.appendChild(y)
+                p.appendChild(document.createElement("br"))
+                p.appendChild(document.createElement("br"))
+
+            }
+            var cb = document.createElement("button")
+            cb.setAttribute("onclick", "calc()")
+            cb.innerHTML = "submit";
+            p.appendChild(cb)
+        }
+        function calc() {
+            let i = 0
+            let sum = 0
+            let x = parseInt(document.getElementById("noc").value)
+            for (i = 1; i <= x; i++) {
+                var a = document.getElementById(i).value
+                console.log(i)
+                sum += (a / x)
+
+                console.log(sum)
+            }
+            let ss = sum.toFixed(2);
+            let o = document.getElementById("op")
+            op.innerHTML = "The percentage is : " + ss + "%"
+        }
+    </script>
+</body>
+
+</html>

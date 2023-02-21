@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 6</title>
+    <script <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <p> 1. Animate a div element to change its height, width, position and background color</p>
+
+    <div style="border: 3px solid black;" id="t1d">This is div for Q1</div>
+    <button id="b1">Change Div</button><br>
+
+    <p>2. Animate a paragraph to fade to an specified opacity (complete the animation within 500 milliseconds).</p>
+    <p id="t2p" style="font-size: 20px; background-color: rgb(8, 0, 255);">THIS IS A PARAGRAPH FOR Q2</p>
+    <button id="b2">Change para</button><br>
+
+    <p>3. Animates all divs to slide down and slide up.</p>
+    <div id="t3d" style="font-size: 20px; background-color: rgb(255, 0, 225); height: 30px;">THIS IS A DIV FOR Q3 </div>
+    <br>
+    <button id="b3">Slide Divs</button>
+    <br>
+    <p>4. Use jQuery to modify the transition speed of the buttons’ color<br></p>
+    <button id="b4" style="height: 35px;">
+        <div id="t4d">Click to change the colour</div>
+    </button>
+    <br>
+    <p>5. Create an image slider with jQuery.<br>
+        <img id="img1" src="./dog.jpg">
+        <img id="img2" style="display: none;" src="./fox.jpeg">
+        <img id="img3" style="display: none;" src="./download.jpeg">
+        <br>
+        <br>
+        <button id="b5">Previous </button>
+        <button id="b6"> Next</button>
+    </p>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <script>
+
+        $(document).ready(function () {
+
+            //Q1
+            $("#b1").click(function () {
+                $("#t1d").animate({ height: "50px", width: "300px", margin: "100px" }, 1000).css("background-color", "red");
+            });
+            //Q2
+            $("#b2").click(function () {
+                $("#t2p").animate({ opacity: 0.25 }, 500)
+            })
+            //Q3
+            $("#b3").click(function () {
+                $("#t3d").slideUp(3000).slideDown(3000)
+            })
+            //Q4
+            $("#b4").click(function () {
+                $("#b4").css({
+                    "transition": "background-color 5s", "background-color": "red"
+                })
+            })
+            let i = 1;
+            let j = 0;
+            let k = 0;
+            $("#b6").click(function () {
+                if (i == 1) {
+                    i--;
+
+                    console.log("i 1st", i);
+                    console.log("j 1st", j);
+                    console.log("k 1st", k);
+                    $("#img2").fadeIn(0)
+                    $("#img1").hide()
+                    j++;
+                    console.log("j 1st2", j);
+                }
+                else if (j == 1) {
+                    console.log("i 2nd", i);
+                    console.log("j 2nd", j);
+                    console.log("k 2nd", k);
+                    j--;
+                    $("#img3").fadeIn(0)
+                    $("#img2").hide()
+                    $("#img1").hide()
+                    k++;
+                    console.log("j in 2nd1", j);
+                    console.log("k in 2nd1", k);
+                }
+            })
+            $("#b5").click(function () {
+                if (k == 1) {
+                    k--;
+                    console.log("i 3rd", i);
+                    console.log("j 3rd", j);
+                    console.log("k 3rd", k);
+                    $("#img2").fadeIn(0)
+                    $("#img3").hide()
+                    j++;
+                    console.log("j", j);
+                }
+                else if (j == 1) {
+                    j--;
+                    $("#img1").fadeIn(0)
+                    $("#img2").hide()
+                    $("#img3").hide()
+                    i++;
+                }
+            })
+
+
+        })
+
+    </script>
+</body>
+
+</html>
